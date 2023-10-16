@@ -1,1 +1,8 @@
-# eJPT_Notes
+## google dorck:
+```
+site:
+intitle:
+cache:
+inurl:
+filetype:
+```
