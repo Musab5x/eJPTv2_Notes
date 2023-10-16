@@ -1,16 +1,16 @@
 ## Google Dorck:
 ```
-site      ===>
-intitle   ===>
-cache:    ===>
-inurl     ===> 
-filetype  ===>
+site:      ===>
+intitle:   ===>
+cache:     ===>
+inurl:     ===> 
+filetype:  ===>
 ```
 
 ## Passive Recon:
 ```
-host     ===>
-whatweb  ===>
-whois    ===>
-dig      ===>
+host:     ===>
+whatweb:  ===>
+whois:    ===>
+dig:      ===>
 ```
