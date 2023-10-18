@@ -167,8 +167,34 @@ hashcat -a3 -m 1800 hash.txt /passPAthfile/
 use MSF module ===> post/linux/manage/sshkey_persistence 
 ```
 
-
-
+## Pivoting:
+```
+run autoroute -s <ip/20>
+portfwd add -l <local-port> -p <remote-port> -r <ip>
+```
+## gather Data From Target:
+```
+#Windows:
+ -Sys Enum:
+   * systeminfo 
+   * wmic qfe get HotFixId
+ - User & group Eunm:
+   * whoami
+   * net user
+   * net localgroup
+   * net localgroup administrators test /add
+   * whoami /priv
+   * query user
+ - Network Enum:
+   * ipconfig /all
+   * route print
+   * arp -a
+   * netstat -ano
+ - Process $ service Enum:
+   * net stat
+   * tasklist /SVC
+   * wmic service list brief
+```
 
 
 
