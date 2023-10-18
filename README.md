@@ -172,9 +172,8 @@ use MSF module ===> post/linux/manage/sshkey_persistence
 run autoroute -s <ip/20>
 portfwd add -l <local-port> -p <remote-port> -r <ip>
 ```
-## gather Data From Target:
+## Windows Information:
 ```
-#Windows:
  -Sys Enum:
    * systeminfo 
    * wmic qfe get HotFixId
@@ -195,9 +194,31 @@ portfwd add -l <local-port> -p <remote-port> -r <ip>
    * tasklist /SVC
    * wmic service list brief
 ```
-
-
-
+## Linux  Information:
+```
+ -Sys Enum:
+   * cat /ect/issue
+   * cat /etc/*release
+   * uname -a
+   * df -h
+ - User & group Eunm:
+   * groups root
+   * cat /etc/passwd | grep -v /nologin
+   * useradd -m test -s /bin/bash
+   * usermod -aG root test
+ - Network Enum:
+   * netstat
+   * route
+   * cat /etc/networks
+   * cat /etc/hosts
+   * arp -a
+ - Process $ service Enum:
+   * ps -aux
+   * top
+   * crontab -l
+   * ls al /etc/cron*
+```
+    
 
 
 
