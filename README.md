@@ -86,7 +86,7 @@ Nmap Script:
  --script=mysql-empty-password
 ```
 
-##FTP Hydra:
+## FTP with Hydra:
 ```
 hydra -L /usernamePathfile/ -P /passPATHfile/ <ip> ftp
 hydra -l username -P /passPATHfile/ <ip> ftp 
