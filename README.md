@@ -66,9 +66,31 @@ SmbClient:
 ```
  smbclient -L \\\\1.1.1.1\\
  smbclient //1.1.1.1/folder -N
+ smbclient -L 1.1.1.1 -U username
  ```
+smb with crackmapexe:
+```
+crackmapexec smb <ip> -u 'username' -p /passPATHfile/
+crackmapexec smb <ip> -u username -p pass -X "whomai"
+```
+Smb with PsExec:
+```
+ psexec.py username@1.1.1.1
+```
 
+## MYSql:
+```
+mysql -h 1.1.1.1 -u username
 
+Nmap Script:
+ --script=mysql-empty-password
+```
+
+##FTP Hydra:
+```
+hydra -L /usernamePathfile/ -P /passPATHfile/ <ip> ftp
+hydra -l username -P /passPATHfile/ <ip> ftp 
+```
 
 
 
