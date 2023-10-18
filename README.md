@@ -86,10 +86,34 @@ Nmap Script:
  --script=mysql-empty-password
 ```
 
-## FTP with Hydra:
+## FTP With Hydra:
 ```
 hydra -L /usernamePathfile/ -P /passPATHfile/ <ip> ftp
 hydra -l username -P /passPATHfile/ <ip> ftp 
+```
+
+## SSH With Haydra:
+```
+hydra -L /usernamePathfile/ -P /passPATHfile/ -t4 <ip> ssh
+hydra -l username -P /passPATHfile/ <ip> ssh
+```
+## Samba:
+```
+hydra -L /usernamePathfile/ -P /passPATHfile/ -t4 <ip> ftp
+smbclient -u username -p pass -H <ip>
+enum4linux -a -u username -p pass <ip>
+```
+
+## Windows Privilege Esclations:
+```
+# windows kernel   ===> use suggester module in metasploit
+# By Passing UAC   ===> use UAC tool / or use bypassuac_injections module in metasploit
+# Access Token Impersonation
+ ```
+## linux Pruvilege Esclations:
+```
+
+
 ```
 
 
