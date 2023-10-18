@@ -147,11 +147,11 @@ psexec.py username@<ip> -hashes:
 ```
 ## Crack Hashing:
 ```
-## Windows:
+ Windows:
 john --format=NT hash.txt --wordlist=/passPAThfile/
 hashcat -a3 -m 1000 hash.txt /passPAthfile/
 
-## Linux:
+ Linux:
 john --format=sha512crypt hash.txt --wordlist=/passPAThfile/
 hashcat -a3 -m 1800 hash.txt /passPAthfile/
 ```
