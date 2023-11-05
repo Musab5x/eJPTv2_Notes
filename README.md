@@ -225,6 +225,12 @@ portfwd add -l <local-port> -p <remote-port> -r <ip>
    * crontab -l
    * ls al /etc/cron*
 ```
+## web:
+```
+dirb:
+- dirb http://<ip>
+
+```
     
 
 
