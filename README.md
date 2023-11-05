@@ -9,21 +9,25 @@ filetype:  ===>
 
 ## Passive Recon:
 ```
-host:     ===>
-whatweb:  ===>
-whois:    ===>
-dig:      ===>
+host:     ===> host test.com
+whatweb:  ===> whatweb -v www.test.com
+whois:    ===> whois www.test.com
+dig:      ===> dig authority www.test.com
 ```
 ## Dns Recon:
 ```
-dnsrec  ===>
-dnsenum ===>
+dnsrecon  ===> dnsrecon -d test.com
+dnsenum   ===> dnsenum  test.com
 ```
 ## Waf Detections:
 ```
-wafwoof ===>
+wafwoof ===>  wafwoof https://test.com
 ```
+## Sublist3r:
+```
+sublist3r ===> sublist3r -d test.com -t 3 
 
+```
 ## Host Discovering:
 ```
 nmap -sn 1.1.1.0/20 
