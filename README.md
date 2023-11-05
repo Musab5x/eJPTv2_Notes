@@ -227,9 +227,12 @@ portfwd add -l <local-port> -p <remote-port> -r <ip>
 ```
 ## web:
 ```
-dirb:
-- dirb http://<ip>
-
+dirb :
+ - dirb http://<ip>
+curl :
+ - curl -X POST <ip>/login.php -d  "name=x&pass=y" -V
+ - curl <ip>/uploads/ --uploads-file test.txt ===> to uploads file
+ - curl -X DELETE <ip>/uploads/teat.txt       ===> to delete file
 ```
     
 
