@@ -229,6 +229,8 @@ portfwd add -l <local-port> -p <remote-port> -r <ip>
 ```
 dirb :
  - dirb http://<ip>
+```
+```
 curl :
  - curl -X POST <ip>/login.php -d  "name=x&pass=y" -V
  - curl <ip>/uploads/ --uploads-file test.txt ===> to uploads file
