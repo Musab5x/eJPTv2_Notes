@@ -18,7 +18,7 @@ dig:      ===> dig authority www.test.com
 ```
 dnsrecon  ===> dnsrecon -d test.com
 dnsenum   ===> dnsenum  test.com
-host      ===> host www.test.com 
+host      ===> host -t mx www.test.com 
 ```
 ## Waf Detections:
 ```
