@@ -215,6 +215,7 @@ portfwd add -l <local-port> -p <remote-port> -r <ip>
    * uname -a
    * df -h
  - User & group Eunm:
+   * id 
    * groups root
    * cat /etc/passwd | grep -v /nologin
    * useradd -m test -s /bin/bash
@@ -230,6 +231,8 @@ portfwd add -l <local-port> -p <remote-port> -r <ip>
    * top
    * crontab -l
    * ls al /etc/cron*
+ - Writable Directory:
+   * find / -writable -type d 2>/deev/null
 ```
 ## Web:
 ```
