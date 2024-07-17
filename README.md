@@ -184,6 +184,8 @@ use MSF module ===> post/linux/manage/sshkey_persistence
 ```
 run autoroute -s <ip/20>
 portfwd add -l <local-port> -p <remote-port> -r <ip>
+# To Remove Pivoting
+route flush
 ```
 ## Windows Information:
 ```
